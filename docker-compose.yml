@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  workmotiontask:
+    image: workmotiontask
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/workmotiontask
+    ports:
+      - "8080:8080"
