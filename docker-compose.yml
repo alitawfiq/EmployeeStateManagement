@@ -2,7 +2,7 @@ version: '3'
 
 services:
   workmotiontask:
-    image: workmotiontask
+    image: alitawfiq/workmotiontask
     build:
       context: ./
       dockerfile: Dockerfile
