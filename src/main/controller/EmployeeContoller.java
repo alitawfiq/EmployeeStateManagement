@@ -44,7 +44,7 @@ public class EmployeeContoller {
 	 * @see Employee Class
 	 */
 	@Operation(summary = "Get a specific employee by his/her ID")
-    @ApiResponse(code = 302, message = "Employee Found")
+    	@ApiResponse(code = 302, message = "Employee Found")
 	@GetMapping("{employeeId}")
 	public ResponseEntity<Employee> getEmployee(@PathVariable Integer employeeId) {
 		return ResponseEntity.status(HttpStatus.FOUND)
@@ -60,7 +60,7 @@ public class EmployeeContoller {
 	 * @see Employee Class
 	 */
 	@Operation(summary = "Get all employees")
-    @ApiResponse(code = 302, message = "Employees found")
+    	@ApiResponse(code = 302, message = "Employees found")
 	@GetMapping
 	public ResponseEntity<List<Employee>> getAllEmployees() {
 		List<Employee> employees = employeeService.getAllEmployees();
@@ -79,7 +79,7 @@ public class EmployeeContoller {
 	 * @see Employee Class
 	 */
 	@Operation(summary = "Add an employee")
-    @ApiResponse(code = 201, message = "Employee has been added successfully")
+   	@ApiResponse(code = 201, message = "Employee has been added successfully")
 	@PostMapping
 	public ResponseEntity<Employee> addEmployee(@Valid @RequestBody Employee employee) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(employeeService.addEmployee(employee));
@@ -93,7 +93,7 @@ public class EmployeeContoller {
 	 * @return resultMap with the success or error
 	 */
 	@Operation(summary = "Update an employee from one state to another")
-    @ApiResponse(code = 200, message = "The employee state has been updated")
+    	@ApiResponse(code = 200, message = "The employee state has been updated")
 	@PatchMapping("{employeeId}/{employeeState}")
 	public Map<String, String> changeEmployeeState(@PathVariable Integer employeeId, @PathVariable String employeeState) {
 		return employeeService.changeEmployeeState(employeeId, employeeState);
