@@ -30,7 +30,7 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Employee {
 	
-	@JsonIgnore
+	@ApiModelProperty(hidden = true)
 	@Id
 	@GeneratedValue
 	private Integer employeeId;
@@ -50,7 +50,7 @@ public class Employee {
 	@JsonFormat(pattern = "dd-MM-yyyy",shape = JsonFormat.Shape.STRING)
 	private Date contractExpiry;
 	
-	@JsonIgnore
+	@ApiModelProperty(hidden = true)
 	@Enumerated(EnumType.STRING)
 	private EmployeeState state;
 }
