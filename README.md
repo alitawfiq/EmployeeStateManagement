@@ -1,4 +1,4 @@
-# WorkMotionTask
+# Employee State Management using state machine, Jpa, Postgres database.
 ## Requirements
   Java 11,
   Maven,
